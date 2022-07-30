@@ -39,6 +39,15 @@
   animation: mario-jump 500ms ease-out;
 }
 
+.button {
+  width: auto;
+  height: auto;
+  margin: 2.5vw;
+  padding: 0.5vw;
+  border: 5px solid green;
+  border-radius: 5px;
+}
+
 @keyframes cloud-animation {
   from {
     right: -550px;

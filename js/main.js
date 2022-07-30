@@ -1,6 +1,16 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 
+
+
+const recomeco = document.querySelector('.button');
+
+
+
+const restart = async () => {
+  await window.loop.restart()
+}
+
 const jump = () => {
   mario.classList.add('jump')
   setTimeout( () => {
@@ -34,3 +44,5 @@ const loop = setInterval(() => {
 }, 10)
 
 document.addEventListener('keydown', jump);
+
+recomeco.addEventListener('click', restart);
