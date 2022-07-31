@@ -2,7 +2,11 @@ const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const gameStart = document.querySelector('.button');
 
+/**
+ * Inicia o jogo.
+ */
 const start = () => {
+  /** Estado do jogo. */
   const gameState = 'Começar';
 
   gameStart.addEventListener('click', () => {
@@ -17,6 +21,9 @@ const start = () => {
     }
   });
 
+  /**
+   * Inicia movimento dos assets.
+   */
   const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window
@@ -38,11 +45,17 @@ const start = () => {
   }, 10);
 };
 
+/**
+ * Recomeça o jogo.
+ */
 const restart = () => {
   loop();
   console.log('Game Restart');
 };
 
+/**
+ * Ação de pulo do player.
+ */
 const jump = () => {
   mario.classList.add('jump');
   setTimeout(() => {
