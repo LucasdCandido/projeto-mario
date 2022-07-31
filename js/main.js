@@ -3,12 +3,14 @@ const pipe = document.querySelector('.pipe');
 
 
 
+
 const recomeco = document.querySelector('.button');
 
 
 
-const restart = async () => {
-  await window.loop.restart()
+const restart = () => {
+  pipe.classList.add('pipe-animation')
+  recomeco.innerHTML = '<h1>Recomeçar</h1>'
 }
 
 const jump = () => {
@@ -36,8 +38,11 @@ const loop = setInterval(() => {
     mario.style.width = '75px';
     mario.style.marginLeft = '50px';
 
-
-    clearInterval(loop);
+    
+    clearInterval(loop, () => {
+      pipe.classList.remove('pipe-animation');
+    });
+    
 
   }
 

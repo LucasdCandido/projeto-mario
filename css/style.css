@@ -25,6 +25,9 @@
   bottom: 0;
   width: 80px;
   right: 0;
+}
+
+.pipe-animation {
   animation: pipe-animation 1.5s infinite linear;
 }
 
@@ -32,7 +35,6 @@
   width: 150px;
   position: absolute;
   bottom: 0;
-
 }
 
 .jump {
