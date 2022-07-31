@@ -1,0 +1,10 @@
+{
+  "editor.tabSize": 2,
+  "editor.autoIndent": "full",
+  "prettier.tabWidth": 2,
+  "prettier.semi": true,
+  "prettier.useTabs": false,
+  "prettier.endOfLine": "crlf",
+  "prettier.enable": true,
+
+}
