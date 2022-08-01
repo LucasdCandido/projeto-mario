@@ -1,14 +1,16 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 
-
-
-
 const recomeco = document.querySelector('.button');
-
+const gameInicio = false;
 
 
 const restart = () => {
+  pipe.classList.add('pipe-animation')
+  const pipePosition = pipe.offsetLeft;
+  if (pipePosition <= 120) {
+    pipe.style.left = '-80px';
+  }
   pipe.classList.add('pipe-animation')
   recomeco.innerHTML = '<h1>Recomeçar</h1>'
 }
@@ -39,14 +41,20 @@ const loop = setInterval(() => {
     mario.style.marginLeft = '50px';
 
     
-    clearInterval(loop, () => {
-      pipe.classList.remove('pipe-animation');
-    });
-    
+    clearInterval(loop);
+    if (pipe.classList.contains('pipe-animation')) {
+      pipe.classList.remove('pipe-animation')
+    }
 
   }
 
+
+  
+
 }, 10)
+
+
+
 
 document.addEventListener('keydown', jump);
 
